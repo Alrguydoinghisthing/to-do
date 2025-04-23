@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for light and dark modes */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background: rgba(77, 77, 77, 0.7);
+    --section-background: rgba(187, 187, 187, 0.9);
+    --button-background: #292929;
+    --button-hover: #3700b3;
+    --weather-info-color: #000000;
+}
+
+.darkmode {
+    --background-color: #272727;
+    --text-color: #ffffff;
+    --header-background: rgba(184, 184, 184, 0.1);
+    --section-background: rgba(154, 154, 154, 0.9);
+    --button-background: #4b257a;
+    --button-hover: #1f0068;
+    --weather-info-color: #ffffff;
+    background: linear-gradient(120deg, #272727, #1e1e1e, #3a3a3a); /* Dark mode gradient */
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite; /* Gradient animation */
+}
+
+/* Apply the variables */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(120deg, #ffffff, #f0f0f0, #e0e0e0); /* Light mode gradient */
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite; /* Gradient animation */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: color 0.5s ease; /* Smooth transition for text color */
+}
+
+header, main, footer {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for other elements */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out elements horizontally */
+    align-items: center; /* Vertically align elements */
+    background-color: var(--header-background);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    flex: 1; /* Allow the heading to take up available space */
+    text-align: center; /* Center the heading */
+}
+
+
+header #current-time {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    margin-left: auto; /* Push the time to the far right */
+}
+
+#weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0.25rem;
+}
+
+#weather-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    top: 20%;
+}
+
+header #weather-info {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: var(--weather-info-color);
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Section Styling */
+section {
+    background: var(--section-background);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #6200ea;
+}
+
+p, ul {
+    margin: 0.5rem 0;
+}
+
+/* Remove To-Do List styles */
+#todo {
+    display: none; /* Hide the To-Do List container */
+}
+
+#todo ul, #todo li, #todo input, #todo button, .done-button, .delete-button {
+    display: none; /* Hide all related elements */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        margin: 0.5rem;
+    }
+}
+
+
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cta-button{
+  background-color: var(--accent-color);
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Changed from fixed to absolute */
+  top: 20; /* Default position */
+  left: 10; /* Default position */
+  transform: translate(0, 0); /* Allow precise positioning */
+  cursor: pointer;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+
+.Daily-Quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+    margin: 1rem; /* Add margin for spacing */
+    display: inline-block; /* Allow it to flow naturally in the layout */
+  
+}
+
+.placeholder {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Allow it to flow naturally in the layout */
+    position: absolute; /* Enable free positioning */
+    top: 1; /* Default position above the header */
+    left: 50%; /* Center horizontally by default */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 10; /* Ensure it appears above the header */
+}
+
+.editable-quote {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Allow it to flow naturally in the layout */
+    position: absolute; /* Enable free positioning */
+    top: 8%; /* Default position */
+    left: 50%; /* Center horizontally and vertically */
+    transform: translate(-50%, -50%); /* Center the element */
+    cursor: move; /* Optional: Indicate it can be moved */
+    z-index: 10; /* Ensure it appears above other elements */
+    outline: none; /* Remove focus outline when editing */
+}
+
+/* To-Do List Light Mode */
+#checklist {
+    --background: #d7d7d7;
+    --text: #414856;
+    --check: #745be4;
+    --disabled: #666f94;
+    --width: 500px;
+    --height: 500px;
+    --border-radius: 10px;
+    background: var(--background);
+    color: var(--text);
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+    padding: 30px 85px;
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+#checklist label {
+    color: var(--text);
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    width: fit-content;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+}
+
+#checklist label::before, #checklist label::after {
+    content: "";
+    position: absolute;
+}
+
+#checklist label::before {
+    height: 2px;
+    width: 8px;
+    left: -27px;
+    background: var(--check);
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+#checklist label:after {
+    height: 4px;
+    width: 4px;
+    top: 8px;
+    left: -25px;
+    border-radius: 50%;
+}
+
+#checklist input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    outline: none;
+    border: 0;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    background: var(--background);
+    display: grid;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#checklist input[type="checkbox"]::before, #checklist input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: auto;
+    background: var(--check);
+    border-radius: 2px;
+}
+
+#checklist input[type="checkbox"]::before {
+    width: 0px;
+    right: 60%;
+    transform-origin: right bottom;
+}
+
+#checklist input[type="checkbox"]::after {
+    width: 0px;
+    left: 40%;
+    transform-origin: left bottom;
+}
+
+#checklist input[type="checkbox"]:checked::before {
+    animation: check-01 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked::after {
+    animation: check-02 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label {
+    color: var(--disabled);
+    animation: move 0.3s ease 0.1s forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label::before {
+    background: var(--disabled);
+    animation: slice 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label::after {
+    animation: firework 0.5s ease forwards 0.1s;
+}
+
+@keyframes move {
+    50% {
+        padding-left: 8px;
+        padding-right: 0px;
+    }
+
+    100% {
+        padding-right: 4px;
+    }
+}
+
+@keyframes slice {
+    60% {
+        width: 100%;
+        left: 4px;
+    }
+
+    100% {
+        width: 100%;
+        left: -2px;
+        padding-left: 0;
+    }
+}
+
+@keyframes check-01 {
+    0% {
+        width: 4px;
+        top: auto;
+        transform: rotate(0);
+    }
+
+    50% {
+        width: 0px;
+        top: auto;
+        transform: rotate(0);
+    }
+
+    51% {
+        width: 0px;
+        top: 8px;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        width: 5px;
+        top: 8px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes check-02 {
+    0% {
+        width: 4px;
+        top: auto;
+        transform: rotate(0);
+    }
+
+    50% {
+        width: 0px;
+        top: auto;
+        transform: rotate(0);
+    }
+
+    51% {
+        width: 0px;
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        width: 10px;
+        top: 8px;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes firework {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        box-shadow: 0 -15px 0 0px #4f29f0, 14px -8px 0 0px #4f29f0, 14px 8px 0 0px #4f29f0, 0 15px 0 0px #4f29f0, -14px 8px 0 0px #4f29f0, -14px -8px 0 0px #4f29f0;
+    }
+}
+
+.darkmode #checklist {
+    --background: #303952;
+    --text: #a9b4cf;
+    --check: #cc29f0;
+    --disabled: #6d6377;
+    --width: 500px; /* Match the light mode size */
+    --height: 500px; /* Match the light mode size */
+    --border-radius: 10px;
+    background: var(--background);
+    color: var(--text);
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+.darkmode #checklist label {
+    color: var(--text);
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    width: fit-content;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+}
+
+.darkmode #checklist label::before,
+.darkmode #checklist label::after {
+    content: "";
+    position: absolute;
+}
+
+.darkmode #checklist label::before {
+    height: 2px;
+    width: 8px;
+    left: -27px;
+    background: var(--check);
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.darkmode #checklist label:after {
+    height: 4px;
+    width: 4px;
+    top: 8px;
+    left: -25px;
+    border-radius: 50%;
+}
+
+.darkmode #checklist input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    outline: none;
+    border: 0;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    background: var(--background);
+    display: grid;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.darkmode #checklist input[type="checkbox"]::before,
+.darkmode #checklist input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: auto;
+    background: var(--check);
+    border-radius: 2px;
+}
+
+.darkmode #checklist input[type="checkbox"]::before {
+    width: 0px;
+    right: 60%;
+    transform-origin: right bottom;
+}
+
+.darkmode #checklist input[type="checkbox"]::after {
+    width: 0px;
+    left: 40%;
+    transform-origin: left bottom;
+}
+
+.darkmode #checklist input[type="checkbox"]:checked::before {
+    animation: check-01 0.4s ease forwards;
+}
+
+.darkmode #checklist input[type="checkbox"]:checked::after {
+    animation: check-02 0.4s ease forwards;
+}
+
+.darkmode #checklist input[type="checkbox"]:checked + label {
+    color: var(--disabled);
+    animation: move 0.3s ease 0.1s forwards;
+}
+
+.darkmode #checklist input[type="checkbox"]:checked + label::before {
+    background: var(--disabled);
+    animation: slice 0.4s ease forwards;
+}
+
+.darkmode #checklist input[type="checkbox"]:checked + label::after {
+    animation: firework 0.5s ease forwards 0.1s;
+}
