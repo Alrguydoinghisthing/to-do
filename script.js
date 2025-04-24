@@ -1,16 +1,13 @@
-// Update the current time every second
 function updateTime() {
     const timeElement = document.getElementById('current-time');
-    const now = new Date();
-    timeElement.textContent = now.toLocaleTimeString();
+    timeElement.textContent = new Date().toLocaleTimeString();
 }
 setInterval(updateTime, 1000);
-updateTime(); // Initial call
+updateTime();
 
-// To-Do List functionality
-const todoList = document.getElementById('todo-list');
-const newTaskInput = document.getElementById('new-task');
 const addTaskButton = document.getElementById('add-task');
+const newTaskInput = document.getElementById('new-task');
+const todoList = document.getElementById('todo-list');
 
 addTaskButton.addEventListener('click', () => {
     const taskText = newTaskInput.value.trim();
@@ -18,62 +15,64 @@ addTaskButton.addEventListener('click', () => {
         const li = document.createElement('li');
         li.textContent = taskText;
 
-        // Create the "Done" button
         const doneButton = document.createElement('button');
         doneButton.textContent = 'Done';
-        doneButton.classList.add('done-button');
-        doneButton.addEventListener('click', () => {
-            li.style.textDecoration = 'line-through'; // Strike through the task text
-        });
+        doneButton.addEventListener('click', () => li.style.textDecoration = 'line-through');
 
-        // Create the "Delete" button
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('delete-button');
         deleteButton.addEventListener('click', () => li.remove());
 
-        // Append buttons to the task
-        li.appendChild(doneButton);
-        li.appendChild(deleteButton);
+        li.append(doneButton, deleteButton);
         todoList.appendChild(li);
-
-        // Clear the input field
         newTaskInput.value = '';
     }
 });
 
-// Placeholder for fetching quotes
 function fetchQuote() {
     const quoteElement = document.querySelector('#quote p');
-    quoteElement.textContent = ''; // Clear placeholder text
+    quoteElement.textContent = '';
 }
 fetchQuote();
 
-// Placeholder for fetching weather
 function fetchWeather() {
     const weatherElement = document.querySelector('#weather p');
     weatherElement.textContent = 'Weather information is currently static. Replace with API integration.';
 }
 fetchWeather();
 
-// Select the toggle input
 const toggleInput = document.getElementById('input');
 
-// Function to apply the theme
 function applyTheme(isDark) {
     document.body.classList.toggle('dark-mode', isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-// Load stored theme on page load
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     const isDark = savedTheme === 'dark';
     toggleInput.checked = isDark;
     applyTheme(isDark);
+
+    const header = document.querySelector('header');
+    const headerChildren = header.querySelectorAll('*');
+    header.style.opacity = '0';
+    headerChildren.forEach(child => child.style.opacity = '0');
+    setTimeout(() => {
+        header.style.opacity = '1';
+        headerChildren.forEach(child => child.style.opacity = '1');
+    }, 1000);
+
+    const editableQuote = document.querySelector('.editable-quote');
+    const placeholder = document.querySelector('.placeholder');
+    editableQuote.style.opacity = '0';
+    placeholder.style.opacity = '0';
+    setTimeout(() => {
+        editableQuote.style.opacity = '1';
+        placeholder.style.opacity = '1';
+    }, 1000);
 });
 
-// Add an event listener to toggle dark mode
 toggleInput.addEventListener('change', () => {
     const isDark = toggleInput.checked;
     applyTheme(isDark);

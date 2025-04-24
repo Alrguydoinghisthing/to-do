@@ -26,6 +26,46 @@
     background: linear-gradient(120deg, #272727, #1e1e1e, #3a3a3a); /* Dark mode gradient */
     background-size: 400% 400%;
     animation: gradient-animation 15s ease infinite; /* Gradient animation */
+    --c: rgb(128, 237, 236);
+    background-color: #272727;
+    background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 253px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 253px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 204px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 204px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 134px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 134px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 179px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 179px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 299px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 299px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 215px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 215px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 281px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 281px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 158px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 158px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 210px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 210px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, #0000 150%);
+    background-size: 300px 235px, 300px 235px, 300px 235px, 300px 252px, 300px 252px, 300px 252px, 300px 150px, 300px 150px, 300px 150px, 300px 253px, 300px 253px, 300px 253px, 300px 204px, 300px 204px, 300px 204px, 300px 134px, 300px 134px, 300px 134px, 300px 179px, 300px 179px, 300px 179px, 300px 299px, 300px 299px, 300px 299px, 300px 215px, 300px 215px, 300px 215px, 300px 281px, 300px 281px, 300px 281px, 300px 158px, 300px 158px, 300px 158px, 300px 210px, 300px 210px, 300px 210px;
+    animation: hi 150s linear infinite;
 }
 
 /* Apply the variables */
@@ -40,6 +80,47 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: color 0.5s ease; /* Smooth transition for text color */
+    position: relative;
+    --c: rgb(255, 106, 0);
+    background-color: #e4e4e4;
+    background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 253px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 253px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 204px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 204px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 134px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 134px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 179px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 179px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 299px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 299px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 215px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 215px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 281px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 281px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 158px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 158px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, #0000 150%),
+        radial-gradient(4px 100px at 0px 210px, var(--c), #0000),
+        radial-gradient(4px 100px at 300px 210px, var(--c), #0000),
+        radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, #0000 150%);
+    background-size: 300px 235px, 300px 235px, 300px 235px, 300px 252px, 300px 252px, 300px 252px, 300px 150px, 300px 150px, 300px 150px, 300px 253px, 300px 253px, 300px 253px, 300px 204px, 300px 204px, 300px 204px, 300px 134px, 300px 134px, 300px 134px, 300px 179px, 300px 179px, 300px 179px, 300px 299px, 300px 299px, 300px 299px, 300px 215px, 300px 215px, 300px 215px, 300px 281px, 300px 281px, 300px 281px, 300px 158px, 300px 158px, 300px 158px, 300px 210px, 300px 210px, 300px 210px;
+    animation: hi 150s linear infinite;
 }
 
 header, main, footer {
@@ -67,6 +148,13 @@ header {
     background-color: var(--header-background);
     color: var(--text-color);
     padding: 1rem 2rem;
+    animation: slide-in 1s ease-out; /* Slide-in animation for header */
+}
+
+header > * {
+    opacity: 0; /* Initially hidden */
+    animation: fade-in 1s ease-out forwards; /* Fade-in animation for child elements */
+    animation-delay: 0.5s; /* Delay to sync with header animation */
 }
 
 header h1 {
@@ -200,6 +288,12 @@ button{
 #theme-switch svg{
   fill: var(--primary-color);
 }
+#theme-switch svg:first-child {
+    display: block; /* Ensure the light mode icon is visible */
+    fill: var(--text-color); /* Match the text color for visibility in light mode */
+    visibility: visible; /* Ensure it is not hidden */
+    opacity: 1; /* Ensure full opacity */
+}
 #theme-switch svg:last-child{
   display: none;
 }
@@ -228,8 +322,8 @@ button{
     margin: 0; /* Remove default margin */
     display: inline-block; /* Allow it to flow naturally in the layout */
     position: absolute; /* Enable free positioning */
-    top: 1; /* Default position above the header */
-    left: 50%; /* Center horizontally by default */
+    top: 2; /* Default position above the header */
+    left:46.2%; /* Center horizontally by default */
     transform: translateX(-50%); /* Center horizontally */
     z-index: 10; /* Ensure it appears above the header */
 }
@@ -241,12 +335,18 @@ button{
     margin: 0; /* Remove default margin */
     display: inline-block; /* Allow it to flow naturally in the layout */
     position: absolute; /* Enable free positioning */
-    top: 8%; /* Default position */
-    left: 50%; /* Center horizontally and vertically */
+    top: 6%; /* Default position */
+    left: 30%; /* Center horizontally and vertically */
     transform: translate(-50%, -50%); /* Center the element */
     cursor: move; /* Optional: Indicate it can be moved */
     z-index: 10; /* Ensure it appears above other elements */
     outline: none; /* Remove focus outline when editing */
+}
+
+.editable-quote, .placeholder {
+    opacity: 0; /* Initially hidden */
+    animation: slide-in 1s ease-out forwards; /* Slide-in animation */
+    animation-delay: 1s; /* Delay to sync with header animation */
 }
 
 /* To-Do List Light Mode */
@@ -562,4 +662,205 @@ button{
 
 .darkmode #checklist input[type="checkbox"]:checked + label::after {
     animation: firework 0.5s ease forwards 0.1s;
+}
+
+
+
+
+ .container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(
+      ellipse 1.5px 2px at 1.5px 50%,
+      #0000 0,
+      #0000 90%,
+      #000 100%
+    );
+    background-size: 25px 8px;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    --c: #09f;
+    background-color: #000;
+    background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 253px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 253px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 204px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 204px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 134px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 134px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 179px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 179px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 299px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 299px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 215px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 215px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 281px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 281px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 158px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 158px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, #0000 150%),
+      radial-gradient(4px 100px at 0px 210px, var(--c), #0000),
+      radial-gradient(4px 100px at 300px 210px, var(--c), #0000),
+      radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, #0000 150%);
+    background-size:
+      300px 235px,
+      300px 235px,
+      300px 235px,
+      300px 252px,
+      300px 252px,
+      300px 252px,
+      300px 150px,
+      300px 150px,
+      300px 150px,
+      300px 253px,
+      300px 253px,
+      300px 253px,
+      300px 204px,
+      300px 204px,
+      300px 204px,
+      300px 134px,
+      300px 134px,
+      300px 134px,
+      300px 179px,
+      300px 179px,
+      300px 179px,
+      300px 299px,
+      300px 299px,
+      300px 299px,
+      300px 215px,
+      300px 215px,
+      300px 215px,
+      300px 281px,
+      300px 281px,
+      300px 281px,
+      300px 158px,
+      300px 158px,
+      300px 158px,
+      300px 210px,
+      300px 210px,
+      300px 210px;
+    animation: hi 150s linear infinite;
+  }
+  
+  @keyframes hi {
+    0% {
+      background-position:
+        0px 220px,
+        3px 220px,
+        151.5px 337.5px,
+        25px 24px,
+        28px 24px,
+        176.5px 150px,
+        50px 16px,
+        53px 16px,
+        201.5px 91px,
+        75px 224px,
+        78px 224px,
+        226.5px 350.5px,
+        100px 19px,
+        103px 19px,
+        251.5px 121px,
+        125px 120px,
+        128px 120px,
+        276.5px 187px,
+        150px 31px,
+        153px 31px,
+        301.5px 120.5px,
+        175px 235px,
+        178px 235px,
+        326.5px 384.5px,
+        200px 121px,
+        203px 121px,
+        351.5px 228.5px,
+        225px 224px,
+        228px 224px,
+        376.5px 364.5px,
+        250px 26px,
+        253px 26px,
+        401.5px 105px,
+        275px 75px,
+        278px 75px,
+        426.5px 180px;
+    }
+  
+    to {
+      background-position:
+        0px 6800px,
+        3px 6800px,
+        151.5px 6917.5px,
+        25px 13632px,
+        28px 13632px,
+        176.5px 13758px,
+        50px 5416px,
+        53px 5416px,
+        201.5px 5491px,
+        75px 17175px,
+        78px 17175px,
+        226.5px 17301.5px,
+        100px 5119px,
+        103px 5119px,
+        251.5px 5221px,
+        125px 8428px,
+        128px 8428px,
+        276.5px 8495px,
+        150px 9876px,
+        153px 9876px,
+        301.5px 9965.5px,
+        175px 13391px,
+        178px 13391px,
+        326.5px 13540.5px,
+        200px 14741px,
+        203px 14741px,
+        351.5px 14848.5px,
+        225px 18770px,
+        228px 18770px,
+        376.5px 18910.5px,
+        250px 5082px,
+        253px 5082px,
+        401.5px 5161px,
+        275px 6375px,
+        278px 6375px,
+        426.5px 6480px;
+    }
+  }
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
